@@ -1,0 +1,20 @@
+.fixed-top {
+    height: 100px;
+}
+/* .nav-tabs > .nav-item > .nav-link.active {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    background: #3578E5 !important;
+} */
+.placeColorBlack{
+    color:black !important;
+}
+
+.register-page .squares, .register-page .square, .section.section-signup .squares, .section.section-signup .square {
+    background: #1D3C78 !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1D3C78), to(#3578E5)) !important;
+    background: linear-gradient(0deg, #1D3C78, #3578E5 100%) !important;
+}
