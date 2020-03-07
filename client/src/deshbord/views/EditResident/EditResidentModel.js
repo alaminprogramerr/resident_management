@@ -123,7 +123,7 @@ const EditInternationalModal = (props) => {
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
                         <label>Gender</label>
-                          <select name="gender" onChange={this.changeHandler}  className="form-control">
+                          <select  defaultValue={props.resident.gender} style={{color:"black"}} name="gender" onChange={changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Gender</option>
                             <option style={{background:"gray"}} value="Adult Male">Adult Male</option>
                             <option style={{background:"gray"}} value="Minor Male">Minor Male</option>
@@ -149,7 +149,7 @@ const EditInternationalModal = (props) => {
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
                           <label>Civil Status</label>
-                          <select name="civilStatus" onChange={this.changeHandler}  className="form-control">
+                          <select defaultValue={props.resident.civilStatus} style={{color:"black"}} name="civilStatus" onChange={changeHandler}  className="form-control">
                             <option style={{background:"gray"}}> Select Civil Status</option>
                             <option style={{background:"gray"}} value="Single Person Without Children">Single Person Without Children</option>
                             <option style={{background:"gray"}} value="Single Parent">Single Parent</option>
@@ -161,7 +161,7 @@ const EditInternationalModal = (props) => {
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Nature Of Admission</label>
-                          <select name="natureOfAdmission" onChange={this.changeHandler}  className="form-control">
+                          <select defaultValue={props.resident.natureOfAdmission} style={{color:"black"}} name="natureOfAdmission" onChange={changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Nature Of Admission</option>
                             <option style={{background:"gray"}} value="Voluntary">Voluntary</option>
                             <option style={{background:"gray"}} value="Involuntary">Involuntary</option>
@@ -238,7 +238,7 @@ const EditInternationalModal = (props) => {
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Type Of Use</label>
-                          <select name="natureOfAdmission" onChange={this.changeHandler}  className="form-control">
+                          <select  defaultValue={props.resident.natureOfAdmission} style={{color:"black"}} name="natureOfAdmission" onChange={changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Type Of Use</option>
                             <option style={{background:"gray"}} value="Single">Single</option>
                             <option style={{background:"gray"}} value="Poly">Poly</option>
@@ -262,7 +262,7 @@ const EditInternationalModal = (props) => {
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Patient Status </label>
-                          <select name="patientStatus" onChange={this.changeHandler}  className="form-control">
+                          <select defaultValue={props.resident.patientStatus} style={{color:"black"}} name="patientStatus" onChange={changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Patient Status</option>
                             <option style={{background:"gray"}} value="Admitted">Admitted</option>
                             <option style={{background:"gray"}} value="Discharge">Discharge</option>
