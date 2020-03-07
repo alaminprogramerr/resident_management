@@ -11,7 +11,7 @@ const createResidents=(req,res)=>{
         if(err){
             return res.json({massage:"error ", err:err})
         }else {
-            return res.status(200).json({massage:"Customer added successfull", clients:clients})
+            return res.status(200).json({massage:"Resident added successfull", clients:clients})
         }
     })
 }

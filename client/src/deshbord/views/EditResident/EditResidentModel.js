@@ -122,12 +122,13 @@ const EditInternationalModal = (props) => {
                     <Row>
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
-                          <label>Gender</label>
-                          <select defaultValue={props.resident.gender} style={{color:"black"}} name="gender" onChange={changeHandler}  className="form-control">
+                        <label>Gender</label>
+                          <select name="gender" onChange={this.changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Gender</option>
-                            <option style={{background:"gray"}} value="Male">Male</option>
-                            <option style={{background:"gray"}} value="Female">Female</option>
-                            <option style={{background:"gray"}} value="Other">Other</option>
+                            <option style={{background:"gray"}} value="Adult Male">Adult Male</option>
+                            <option style={{background:"gray"}} value="Minor Male">Minor Male</option>
+                            <option style={{background:"gray"}} value="Adult Female">Adult Female</option>
+                            <option style={{background:"gray"}} value="Minor Female">Minor Female</option>
                           </select>
                         </FormGroup>
                       </Col>
@@ -148,25 +149,23 @@ const EditInternationalModal = (props) => {
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
                           <label>Civil Status</label>
-                          <Input
-                            defaultValue={props.resident.civilStatus}
-                            style={{color:"black"}}
-                            name="civilStatus"
-                            onChange={changeHandler}
-                            placeholder="Civil Status"
-                          />
+                          <select name="civilStatus" onChange={this.changeHandler}  className="form-control">
+                            <option style={{background:"gray"}}> Select Civil Status</option>
+                            <option style={{background:"gray"}} value="Single Person Without Children">Single Person Without Children</option>
+                            <option style={{background:"gray"}} value="Single Parent">Single Parent</option>
+                            <option style={{background:"gray"}} value="Married/Cohabitant">Married/Cohabitant</option>
+                            <option style={{background:"gray"}} value="Living with Parent">Living with Parent</option>
+                          </select>
                         </FormGroup>
                       </Col>
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Nature Of Admission</label>
-                          <Input
-                            defaultValue={props.resident.natureOfAdmission}
-                            style={{color:"black"}}
-                            name="natureOfAdmission"
-                            onChange={changeHandler}
-                            placeholder="Enter Nature Of Admission"
-                          />
+                          <select name="natureOfAdmission" onChange={this.changeHandler}  className="form-control">
+                            <option style={{background:"gray"}}>Select Nature Of Admission</option>
+                            <option style={{background:"gray"}} value="Voluntary">Voluntary</option>
+                            <option style={{background:"gray"}} value="Involuntary">Involuntary</option>
+                          </select>
                         </FormGroup>
                       </Col>
                     </Row>
@@ -238,14 +237,12 @@ const EditInternationalModal = (props) => {
                       </Col>
                       <Col className="px-md-1" md="6">
                         <FormGroup>
-                          <label>Type Of Use </label>
-                          <Input
-                            defaultValue={props.resident.typeOfUse}
-                            style={{color:"black"}}
-                            name="typeOfUse"
-                            onChange={changeHandler}
-                            placeholder="Type Of Use"
-                          />
+                          <label>Type Of Use</label>
+                          <select name="natureOfAdmission" onChange={this.changeHandler}  className="form-control">
+                            <option style={{background:"gray"}}>Select Type Of Use</option>
+                            <option style={{background:"gray"}} value="Single">Single</option>
+                            <option style={{background:"gray"}} value="Poly">Poly</option>
+                          </select>
                         </FormGroup>
                       </Col>
                     </Row>
@@ -265,13 +262,11 @@ const EditInternationalModal = (props) => {
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Patient Status </label>
-                          <Input
-                            defaultValue={props.resident.patientStatus}
-                            style={{color:"black"}}
-                            name="patientStatus"
-                            onChange={changeHandler}
-                            placeholder="Patient Status"
-                          />
+                          <select name="patientStatus" onChange={this.changeHandler}  className="form-control">
+                            <option style={{background:"gray"}}>Select Patient Status</option>
+                            <option style={{background:"gray"}} value="Admitted">Admitted</option>
+                            <option style={{background:"gray"}} value="Discharge">Discharge</option>
+                          </select>
                         </FormGroup>
                       </Col>
                     </Row>
