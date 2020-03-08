@@ -32,7 +32,7 @@ editResidents= (req, res)=>{
             return res.status({massage:"server erroro occured ! "})
         }
         console.log(result)
-        return res.status(500).json({massage:"Updated successfull !", result:result})
+        return res.status(200).json({massage:"Updated successfull !", result:result})
     })
 }
 deleteResidents=(req, res)=>{

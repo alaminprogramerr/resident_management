@@ -23,6 +23,7 @@ const EditInternationalModal = (props) => {
     const submitHandler= ()=>{
       Axios.post('http://localhost:5000/edit-residents/'+props.resident._id , resident)
       .then(resident=>{
+        alert(resident.data.massage)
         window.location.href='/admin/all-resident'
       })
       console.log(resident)

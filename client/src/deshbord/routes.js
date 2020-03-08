@@ -4,6 +4,7 @@ import AddResident from './views/addResident/CreateResident'
 import EditResident from './views/EditResident/EditResident'
 import JWTDecoder from 'jwt-decode'
 import UserList from './views/UserList'
+import Report from "./views/Report.js";
 let admin 
 if(localStorage.getItem('resident-token')){
    admin=JWTDecoder(localStorage.getItem('resident-token')).admin
@@ -30,6 +31,14 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-single-02",
     component: UserProfile,
+    layout: "/admin"
+  },
+  {
+    path: "/report",
+    name: "Report ",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-caps-small",
+    component: Report,
     layout: "/admin"
   }
 ];
