@@ -31,6 +31,42 @@ const EditFlight =()=>{
         window.location.href='/admin/all-resident'
       })
     }
+    const sort=(event)=>{
+      console.log(event.target.value)
+      if(event.target.value==='Sort By Assending'){
+        Axios.get('http://localhost:5000/assending')
+        .then(res=>{
+          setResidents(res.data)
+        })
+      }
+      if(event.target.value==='Sort By Dessending'){
+        Axios.get('http://localhost:5000/dessending')
+        .then(res=>{
+          setResidents(res.data)
+        })
+      }
+      if(event.target.value==='No Sort'){
+        
+        Axios.get('http://localhost:5000/all-residents')
+        .then(resident=>{
+          setResidents(resident.data.residents)
+        })
+        .catch(err=>{
+          console.log(err)
+        })
+      }      
+    }
+    const search=(event)=>{
+      console.log('searching')
+      Axios.post('http://localhost:5000/search',{text:event.target.value})
+      .then(resident=>{
+        setResidents(resident.data)
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+
+    }
     return (
       <>
         <div className="content">
@@ -40,8 +76,19 @@ const EditFlight =()=>{
               <Card>
                 <CardBody>
                   <div className="internationalFlight">
-                    <div>
+                    <div className='d-flex'>
                       <h1 style={{color:"#3578E5", textTransform:"capitalize", fontWeight:"600"}}>Edit Residents <span style={{fontSize:"14px"}}>( All )</span></h1>
+                      <div className="d-flex">
+                        <select onChange={sort} style={{fontSize:'15px', color:'white',fontWeight:'500', marginLeft:'30px'}} className="form-control">
+                          <option style={{color:'black'}}>Select a option to sort</option>
+                          <option style={{color:'black'}}>Sort By Assending</option>
+                          <option style={{color:'black'}}>Sort By Dessending</option>
+                          <option style={{color:'black'}}>No Sort</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input className="form-control ml-5" style={{fontSize:'15px', color:'white',fontWeight:'500', marginLeft:'30px',minWidth:'360px'}} placeholder="Search by Name, Address, Gender, Patient status " onChange={search}/>
+                      </div>
                     </div>
                     <Table className="tablesorter  pb-5 mb-5" responsive>
                       <thead className="text-success">
@@ -52,7 +99,10 @@ const EditFlight =()=>{
                           <th>Action</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody>    
+                        {residents.length<1?
+                        <h1 className="text-center text-danger">Not Existing</h1>:''
+                        }
                         {residents.map((single)=>{
                        return(
                          

@@ -1,6 +1,7 @@
 const validator=require('validator')
 const registervalidator =(info)=>{
     
+    
     const err={}
     if(!info.name){
         err.name="Name requird"

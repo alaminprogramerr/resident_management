@@ -57,7 +57,7 @@ class ResidentForm  extends React.Component {
                     <Row>
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
-                          <label>name</label>
+                          <label>Name</label>
                           <Input
                             name="name"
                             onChange={this.changeHandler}
@@ -113,7 +113,7 @@ class ResidentForm  extends React.Component {
                           />
                         </FormGroup>
                       </Col>
-                      <Col className="px-md-1" md="6">
+                      {/* <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Guardian Number</label>
                           <Input
@@ -122,7 +122,7 @@ class ResidentForm  extends React.Component {
                             placeholder="Enter Guardian Number"
                           />>
                         </FormGroup>
-                      </Col>
+                      </Col> */}
                     </Row>
                     <h2>Additional Information</h2>
                     <Row>
@@ -233,7 +233,7 @@ class ResidentForm  extends React.Component {
                       <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label>Type Of Use</label>
-                          <select name="natureOfAdmission" onChange={this.changeHandler}  className="form-control">
+                          <select name="typeOfUse" onChange={this.changeHandler}  className="form-control">
                             <option style={{background:"gray"}}>Select Type Of Use</option>
                             <option style={{background:"gray"}} value="Single">Single</option>
                             <option style={{background:"gray"}} value="Poly">Poly</option>
